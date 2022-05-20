@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/parent"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:gravity="center"
     android:background="#33FFFF00"
-    android:orientation="vertical">
-    <Button
-        android:id="@+id/button"
-        android:textSize="18sp"
-        android:text="Click to Orangead"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Stop clicking 10s to switch"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Here adding a TextView to show countdown -->
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/detailsElementBackground"
+        android:gravity="center_horizontal|center_vertical"
+        android:textColor="@color/teal_700"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        tools:text="Counter"/>
 </LinearLayout>
