@@ -11,11 +11,14 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
     var view= R.layout.activity_main
     var button: Button? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(view)
+
         val parent = findViewById<LinearLayout>(R.id.parent)
         button = findViewById(R.id.button)
+
         button!!.setOnClickListener(View.OnClickListener {
             val launchIntent =
                 packageManager.getLaunchIntentForPackage("com.example.test_workflow")
