@@ -16,10 +16,12 @@ class MainActivity : AppCompatActivity() {
     // Declaring handler, runnable and time in milli seconds
     private lateinit var mHandler: Handler
     private lateinit var mRunnable: Runnable
-    private var mTime: Long = 10000
+    private var mTime: Long = 7000
 
+    private lateinit var mText : TextView
     private lateinit var mCounter: TextView
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -27,8 +29,11 @@ class MainActivity : AppCompatActivity() {
         val launchIntent =
             packageManager.getLaunchIntentForPackage("com.example.orangeadapp")
 
-        mCounter = findViewById(R.id.counter)
+        mText = findViewById(R.id.text)
+        mText.text = "Don't touch for ${mTime / 1000} seconds"
 
+        // ***** START COUNTDOWN TIMER *****
+        mCounter = findViewById(R.id.counter)
         object : CountDownTimer(mTime, 1000) {
             @SuppressLint("SetTextI18n")
             override fun onTick(millisUntilFinished: Long) {
@@ -43,8 +48,8 @@ class MainActivity : AppCompatActivity() {
             override fun onFinish() {
                 mCounter.text = "00:00"
             }
-
         }.start()
+        // ***** END COUNTDOWN TIMER *****
 
         // Initializing the handler and the runnable
         mHandler = Handler(Looper.getMainLooper())

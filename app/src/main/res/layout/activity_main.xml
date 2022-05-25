@@ -10,10 +10,11 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:text="Stop clicking 10s to switch"
+        tools:text="Stop clicking __s to switch"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -28,5 +29,5 @@
         android:textColor="@color/teal_700"
         android:textSize="36sp"
         android:textStyle="bold"
-        tools:text="Counter"/>
+        tools:text="Counter" />
 </LinearLayout>

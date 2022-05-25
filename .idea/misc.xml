@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/kaidu/Desktop/Udemy/Test_SwitchingBetweenApps/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Users/kaidu/Desktop/Udemy/Test_SwitchingBetweenApps/orangeadapp/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.4473958333333333" />
         <entry key="orangeadapp/src/main/res/layout/activity_main.xml" value="0.4640625" />
       </map>
